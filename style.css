@@ -239,6 +239,11 @@ section #inner-left img{
     border-radius: 50%;
     box-shadow: 0px 0px 12px rgba(162, 255, 240, 0.6);
     background: linear-gradient(to bottom right, rgb(162, 255, 240) 30%, rgb(0, 200, 200) 50%, rgb(0, 110, 235) 80%);
+    transition: ease 2s;
+}
+
+section #inner-left img:hover{
+    transform: scale(1.1);
 }
 
 section #inner-left #text {
@@ -334,6 +339,11 @@ section #inner-right img{
     box-shadow: 0px 0px 12px rgba(162, 255, 240, 0.6);
     background: linear-gradient(to bottom right, rgb(162, 255, 240) 30%, rgb(0, 200, 200) 50%, rgb(0, 110, 235) 80%);
     border-radius: 5px;
+    transition: ease 2s;
+}
+
+section #inner-right img:hover{
+    transform: scale(1.1);
 }
 
 #spacer{
