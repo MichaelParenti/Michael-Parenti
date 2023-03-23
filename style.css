@@ -13,6 +13,7 @@ html, body{
     
     background-color: rgb(32, 32, 36);
 
+    scroll-behavior: smooth;
     overflow-x: hidden;
 }
 
@@ -480,7 +481,7 @@ section #inner-right img:hover{
 
 #contact{
     position: static;
-    height: calc(auto - 100vh);
+    min-height: 120vh;
     width: auto;
     align-items: center;
     justify-content: end;;
@@ -499,6 +500,30 @@ section #inner-right img:hover{
     margin-bottom: 0px;
 }
 
+#contact #relative-wrapper::after{
+    display: block;
+    content: "";
+    position: relative;
+    top: -25.6px;/*740px*/
+    height: 20px;
+    /* width: 100vw; */
+    /* border: solid 1px white; */
+    z-index: 50;
+    background: linear-gradient(to bottom, rgb(32, 32, 36), transparent);
+}
+
+#contact #relative-wrapper video{
+    min-height: 120vh;
+    min-width: 120vw;
+    opacity: 0.1;
+    mix-blend-mode: lighten;
+    
+    position: relative;
+    top: -15px;
+    /* bottom: 120vh; */
+    left: 0vw;
+    margin-bottom: -120vh;   
+}
 #contact #form{
     padding: 0px 0px;
     padding-top: 50px;
@@ -530,17 +555,6 @@ section #inner-right img:hover{
     transition: ease;
 }
 
-#contact #form::after{
-    display: block;
-    content: "";
-    position: relative;
-    bottom: 720px;
-    height: 20px;
-    width: 100vw;
-    /* border: solid 1px white; */
-    z-index: 50;
-    background: linear-gradient(to bottom, rgb(32, 32, 36), transparent);
-}
 
 #contact #form .elfsight-app-cfb92c29-159c-4170-82b4-70769bbda0e2{
     position: relative;
@@ -553,18 +567,7 @@ section #inner-right img:hover{
 #contact #form #relative-wrapper{
     position: relative;
     width: 100vw;
-}
-
-#contact #form #relative-wrapper video{
-    min-height: 100vh;
-    min-width: 100vw;
-    opacity: 0.1;
-    mix-blend-mode: lighten;
-    
-    position: absolute;
-    bottom: -100vh;
-    left: 0vw;
-    margin-bottom: 100vh;   
+    height: 0px;
 }
 
 #contact-styling{
@@ -572,7 +575,7 @@ section #inner-right img:hover{
     position: relative;
     height: 50px;
     width: 100vw;
-    bottom: 20px;
+    bottom: 0px;
     left: 0px;
     /* transform: translateX(-50%);-8 */
     background-color: rgb(32, 32, 36);

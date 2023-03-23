@@ -5,23 +5,28 @@ var nav_menu = document.getElementById('hamburger');
 
 var full = document.getElementById('fullscreen-menu');
 var close = document.getElementById('close');
-var home = document.getElementById('home');
-var projects = document.getElementById('projects');
-var about = document.getElementById('about');
-var contact = document.getElementById('contact');
+var home = document.getElementById('link_home');
+var projects = document.getElementById('link_projects');
+var about = document.getElementById('link_about');
+var contact = document.getElementById('link_contact');
 
 var card = document.getElementById('info-cards');
 var form = document.getElementById('form');
+var submit = document.querySelector("#eapps-contact-form-cfb92c29-159c-4170-82b4-70769bbda0e2 > div > div > div.WidgetBackground__ContentContainer-sc-1ho7q3r-1.hYzmOv > div > div > form > div.FormLayout__Footer-sc-2kg2eg-9.bmJdoo > div > button");
+
+var top = document.getElementById('bookmark-one');
 
 
 
 ////////////////////////////////
 
+
+
 //Fullscreen Menu Controls
 nav_menu.addEventListener('click', () => {
     full.style.animation = 'slide-in ease 1s';
     setTimeout(() => {
-        full.style.transform = 'translateX(0%)';
+            full.style.transform = 'translateX(0%)';
     }, 100)
 });
 
@@ -75,3 +80,11 @@ setInterval (() => {
         card.style.opacity = '1';
     }
 }, 1);
+
+
+
+//Submit Button Actions - Scroll to top on load
+window.addEventListener('load', () => {
+    console.log("scrolled to top");
+    window.scrollTo(0, 0);
+});
