@@ -369,8 +369,13 @@ section #inner-right img:hover{
 }
 
 #projects hr{
-    width: 80%;
+    width: 100%;
     margin-bottom: 50px;
+    height: 3px;
+    z-index: 50;
+    border: none;
+    border-top: solid 20px rgb(32, 32, 36);
+    background-image: linear-gradient(to right, rgb(32, 32, 36) 10%, white 11%, white 90%, rgb(32, 32, 36) 91%);
 }
 
 #projects #info-cards{
@@ -451,8 +456,13 @@ section #inner-right img:hover{
 }
 
 #about hr{
-    width: 80%;
+    width: 100%;
     margin-bottom: 50px;
+    height: 3px;
+    z-index: 50;
+    border: none;
+    border-top: solid 20px rgb(32, 32, 36);
+    background-image: linear-gradient(to right, rgb(32, 32, 36) 10%, white 11%, white 90%, rgb(32, 32, 36) 91%);
 }
 
 #about-container{
@@ -465,7 +475,7 @@ section #inner-right img:hover{
     background-position: fixed;
     background-size: auto;
     background-color: rgb(0, 200, 200, 0.1);
-    box-shadow: 0px 0px 100px 20px rgb(0, 200, 200, 0.1);
+    box-shadow: 0px 0px 50px 20px rgb(0, 200, 200, 0.1);
     animation: pulse infinite linear 5s;
     
     padding: 20px;
@@ -496,27 +506,27 @@ section #inner-right img:hover{
 }
 
 #contact hr{
-    width: 80%;
+    height: 3px;
+    width: 100%;
     margin-bottom: 0px;
+    z-index: 50;
+    border: none;
+    border-top: solid 20px rgb(32, 32, 36);
+    background-image: linear-gradient(to right, rgb(32, 32, 36) 10%, white 11%, white 90%, rgb(32, 32, 36) 91%);
+    box-shadow: 0px 5px 10px 1px rgb(32, 32, 36);
 }
 
-#contact #relative-wrapper::after{
+#contact #relative-wrapper{
     display: block;
-    content: "";
-    position: relative;
-    top: -25.6px;/*740px*/
-    height: 20px;
-    /* width: 100vw; */
-    /* border: solid 1px white; */
-    z-index: 50;
-    background: linear-gradient(to bottom, rgb(32, 32, 36), transparent);
+    height: 0px;
 }
 
 #contact #relative-wrapper video{
     min-height: 120vh;
     min-width: 120vw;
     opacity: 0.1;
-    mix-blend-mode: lighten;
+    background-blend-mode: lighten;
+    /* mix-blend-mode: lighten; */
     
     position: relative;
     top: -15px;
@@ -657,15 +667,15 @@ section #inner-right img:hover{
 @keyframes pulse {
     0%{
         background-color: rgb(0, 200, 200, 0.1);
-        box-shadow: 0px 0px 100px 20px rgb(0, 200, 200, 0.1);
+        box-shadow: 0px 0px 50px 20px rgb(0, 200, 200, 0.1);
     }
     50%{
         background-color: rgb(0, 200, 200, 0.01);
-        box-shadow: 0px 0px 100px 20px rgb(0, 200, 200, 0.01);
+        box-shadow: 0px 0px 50px 20px rgb(0, 200, 200, 0.01);
     }
     100%{
         background-color: rgb(0, 200, 200, 0.1);
-        box-shadow: 0px 0px 100px 20px rgb(0, 200, 200, 0.1);
+        box-shadow: 0px 0px 50px 20px rgb(0, 200, 200, 0.1);
     }
 }
 
