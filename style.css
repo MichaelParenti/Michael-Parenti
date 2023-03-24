@@ -12,9 +12,13 @@ html, body{
     color: white;
     
     background-color: rgb(32, 32, 36);
-
+    
     scroll-behavior: smooth;
     overflow-x: hidden;
+}
+
+body{
+    overflow: hidden;
 }
 
 ::-webkit-scrollbar{
@@ -366,6 +370,7 @@ section #inner-right img:hover{
 
 #projects .title{
     font-size: clamp(28px, 4vw, 54px);
+    margin-bottom: calc(0.83em - 20px);
 }
 
 #projects hr{
@@ -452,6 +457,7 @@ section #inner-right img:hover{
 
 #about .title{
     margin-top: 50px;
+    margin-bottom: calc(0.83em - 20px);
     font-size: clamp(28px, 4vw, 54px);
 }
 
@@ -496,12 +502,13 @@ section #inner-right img:hover{
     align-items: center;
     justify-content: end;;
     flex-direction: column;
-    margin-bottom: -40px;
+    margin-bottom: -80px;
     overflow: hidden;
 }
 
 #contact .title{
     margin-top: 50px;
+    margin-bottom: calc(0.83em - 20px);
     font-size: clamp(28px, 4vw, 54px);
 }
 
