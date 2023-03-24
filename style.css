@@ -502,7 +502,7 @@ section #inner-right img:hover{
     align-items: center;
     justify-content: end;;
     flex-direction: column;
-    margin-bottom: -80px;
+    margin-bottom: -40px;
     overflow: hidden;
 }
 
