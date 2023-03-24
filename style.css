@@ -440,6 +440,10 @@ section #inner-right img:hover{
     animation: icons infinite linear 2s;
 }
 
+#projects #info-cards .card img:hover{
+    transform: scale(1.2);
+}
+
 
 
 /*
