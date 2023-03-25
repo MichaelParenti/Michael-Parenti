@@ -481,16 +481,110 @@ section #inner-right img:hover{
     width: calc(80% - 40px);
     top: 300vh;
 
-    background-image: url('texture.png');
-    background-position: fixed;
-    background-size: auto;
-    background-color: rgb(0, 200, 200, 0.1);
-    box-shadow: 0px 0px 50px 20px rgb(0, 200, 200, 0.1);
-    animation: pulse infinite linear 5s;
+    /* background-position: fixed; */
+    /* background-size: auto; */
+    /* background-color: rgb(0, 200, 200, 0.1); */
+    /* box-shadow: 0px 0px 50px 20px rgb(0, 200, 200, 0.1); */
+    /* animation: pulse infinite linear 5s; */
     
     padding: 20px;
     align-items: center;
     line-height: 30px;
+    font-size: larger;
+    box-shadow: inset 0px 0px 100px 10px rgb(0, 0, 0), 0px 0px 10px 10px rgb(0, 0, 0);
+    background: radial-gradient(800px circle at var(--x1-coor) var(--y1-coor), rgba(0, 200, 200, 0.05), transparent 40%);
+}
+
+#about-container h1{
+    font-size: clamp(28px, 4vw, 36px);
+    margin-bottom: 50px;
+}
+
+#about-container h1:nth-child(5){
+    font-size: clamp(20px, 4vw, 36px);
+    margin-bottom: 50px;
+}
+
+#about-container h1 span{
+    color: rgb(0, 200, 200);
+}
+
+#about-container #languages{
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    background: radial-gradient(800px circle at var(--x-coor) var(--y-coor), rgba(0, 200, 200, 0.6), transparent 40%);
+}
+
+#about-container #languages-1{
+    /* z-index:99999999999; */
+    width: auto;
+}
+
+#about-container #languages-2{
+    background: radial-gradient(800px circle at var(--x2-coor) var(--y2-coor), rgba(0, 200, 200, 0.6), transparent 40%);
+}
+
+#about-container #languages-1, #about-container #languages-2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+#about-container #languages img{
+    height: 130px;
+    width: 130px;
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#about-container #languages-1 img, #about-container #languages-2 img{
+    height: 130px;
+    width: 130px;
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+#about-container #languages img:nth-child(n):hover, #about-container #languages-1 img:nth-child(n):hover, #about #languages-2 img:nth-child(n):hover{
+    animation: scale-and-hover linear 500ms;
+}
+
+#about-container a{
+    text-decoration: none;
+    background-color: rgb(0, 200, 200);
+    color: rgb(32, 32, 36);
+    padding: 10px;
+    border-radius: 5px;
+    border: solid rgb(0, 200, 200);
+    white-space: nowrap;
+    margin: 0px;
+    font-weight: 600;
+    font-size: large;
+}
+
+#about-container a:hover{
+    background: transparent;
+    border: solid rgb(0, 200, 200);
+    color: rgb(0, 200, 200);
+    transform: scale(1.1);
+}
+
+#about-container #certs p{
+    border-image: linear-gradient(to bottom right, rgb(162, 255, 240) 30%, rgb(0, 200, 200) 50%, rgb(0, 110, 235) 80%) 1;
+    border-bottom: solid 3px;
+    
+    animation: gradient-flow-horizontal infinite linear 3s;
+}
+
+#about-container #certs p:nth-child(6){
+    margin-bottom: 40px;
 }
 
 
@@ -633,6 +727,18 @@ section #inner-right img:hover{
     }
 }
 
+@media only screen and (max-width: 900px) {
+    #about-container #languages{
+        display: flex;
+    }
+    #about-container #languages img:nth-child(6){
+        margin-bottom: 50px;
+    }
+    #about-container #languages-1, #about-container #languages-2{
+        display: none;
+    }
+}
+
 @media only screen and (max-width: 800px) {
     #projects #info-cards{
         gap: 50px;
@@ -657,6 +763,11 @@ section #inner-right img:hover{
     }
     nav #hamburger{
         display: block;
+    }
+    #about-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
 
@@ -702,6 +813,18 @@ section #inner-right img:hover{
     }
 }
 
+@keyframes gradient-flow-horizontal {
+    0%{
+        border-image: linear-gradient(to right, rgb(162, 255, 240) 30%, rgb(0, 200, 200) 50%, rgb(0, 110, 235) 80%) 1;
+    }
+    50%{
+        border-image: linear-gradient(to left, rgb(162, 255, 240) 30%, rgb(0, 200, 200) 50%, rgb(0, 110, 235) 80%) 1;
+    }
+    100%{
+        border-image: linear-gradient(to right, rgb(162, 255, 240) 30%, rgb(0, 200, 200) 50%, rgb(0, 110, 235) 80%) 1;
+    }
+}
+
 @keyframes icons {
     0%{
         box-shadow: 0px 0px 5px 0px rgb(255, 255, 255);
@@ -729,5 +852,23 @@ section #inner-right img:hover{
     }
     100%{
         transform: translateX(100%);
+    }
+}
+
+@keyframes scale-and-hover {
+    0%{
+        transform: scale(1);
+    }
+    25%{
+        transform: scale(1.1) rotateZ(10deg);
+    }
+    50%{
+        transform: scale(1.1) rotateZ(0deg);
+    }
+    75%{
+        transform: scale(1.1) rotateZ(-10deg);
+    }
+    100%{
+        transform: scale(1) rotateZ(0deg);
     }
 }
