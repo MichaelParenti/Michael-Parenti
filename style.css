@@ -245,6 +245,7 @@ section #inner-left img{
     box-shadow: 0px 0px 12px rgba(162, 255, 240, 0.6);
     background: linear-gradient(to bottom right, rgb(162, 255, 240) 30%, rgb(0, 200, 200) 50%, rgb(0, 110, 235) 80%);
     transition: ease 2s;
+    animation: fade-in 5s;
 }
 
 section #inner-left img:hover{
@@ -345,6 +346,7 @@ section #inner-right img{
     background: linear-gradient(to bottom right, rgb(162, 255, 240) 30%, rgb(0, 200, 200) 50%, rgb(0, 110, 235) 80%);
     border-radius: 5px;
     transition: ease 2s;
+    animation: fade-in 5s;
 }
 
 section #inner-right img:hover{
