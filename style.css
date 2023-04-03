@@ -558,7 +558,7 @@ section #inner-right img:hover{
     animation: scale-and-hover linear 500ms;
 }
 
-#about-container a{
+#about-container #resume{
     text-decoration: none;
     background-color: rgb(0, 200, 200);
     color: rgb(32, 32, 36);
@@ -571,11 +571,30 @@ section #inner-right img:hover{
     font-size: large;
 }
 
-#about-container a:hover{
+#about-container #resume:hover{
     background: transparent;
     border: solid rgb(0, 200, 200);
     color: rgb(0, 200, 200);
-    transform: scale(1.1);
+    transform: scale(1);
+}
+
+#about-container #linkedin{
+    text-decoration: none;
+    white-space: nowrap;
+    color: rgb(0, 200, 200);
+    padding: 10px;
+    border-radius: 5px;
+    border: solid rgb(0, 200, 200);
+    /* margin-top: 100px; */
+    font-weight: 600;
+    font-size: large;
+    margin: 0px;
+}
+
+#about-container #linkedin:hover{
+    background-color: rgb(0, 200, 200);
+    color: rgb(32, 32, 36);
+    transform: scale(1);
 }
 
 #about-container #certs p{
@@ -770,6 +789,16 @@ section #inner-right img:hover{
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 310px) {
+    #about-container #link-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
     }
 }
 
