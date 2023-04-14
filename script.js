@@ -95,30 +95,13 @@ cont.onmousemove = (e) => {
     console.log("mousemove is working");
 
         const rect = target.getBoundingClientRect();
-        // var section_two = e.target.getBoundingClientRect();
 
         const x1 = e.clientX - rect.left;
-        // x2 = e.clientX - section_two.left;
         const y1 = e.clientY - rect.top;
-        // y2 = e.clientY - section_two.top;
 
         target.style.setProperty("--x1-coor", x1 + "px");
-        // e.target.style.setProperty("--x2-coor", x2 + "px");
         target.style.setProperty("--y1-coor", y1 + "px");
-        // e.target.style.setProperty("--y2-coor", y2 + "px");
 
-    // if(section_one.style.display === 'none' && section_two.style.display == 'none'){
-    //     section.style.background = "yellow";
-    //     section = target.getBoundingClientRect();
-
-    //     x = e.clientX - section.left;
-    //     y = e.clientY - section.top;
-
-    //     target.style.setProperty("--mouse-x", x + "px");
-    //     target.style.setProperty("--mouse-y", y + "px");
-
-    //     console.log("one section");
-    // }
 };
 
 

@@ -403,7 +403,7 @@ section #inner-right img:hover{
     border-image-repeat: no-repeat;
     border-radius: 5px;
     background-color: rgb(32, 32, 36);
-    background-image: url('texture.png');
+    background-image: url('images/texture.png');
     padding: 20px;
     display: flex;
     flex-direction: column;
