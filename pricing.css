@@ -1,0 +1,133 @@
+#background-circle-1, #background-circle-2, #background-circle-3 {
+    position: fixed;
+}
+
+/* Pricing Section */
+#pricing-section {
+    padding: 60px 0;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 10;
+}
+
+#pricing-section .title {
+    font-size: 2.5rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 0.5em;
+    letter-spacing: 1px;
+}
+
+#pricing-section hr {
+    border: none;
+    border-top: 2px solid #00e6d3;
+    width: 60px;
+    margin: 0 auto 2rem auto;
+    opacity: 0.7;
+}
+
+#pricing-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.pricing-card {
+    background: rgba(0, 92, 84, 0.15);
+    background-blend-mode: none;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15),
+                0 4px 12px rgba(0,230,210,0.8);
+    padding: 2rem 1.5rem;
+    width: fit-content;
+    min-width: 280px;
+    max-width: 370px;
+    flex: 1 1 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 2;
+    border: 2px solid #00e6d3;
+}
+
+.pricing-card h2 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.pricing-card p {
+    font-size: 1.2rem;
+    color: #00e6d3;
+    margin: 0 0 1rem 0;
+    font-weight: bold;
+}
+
+.pricing-card p strong {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.pricing-card ul {
+    color: #ccc;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+}
+
+.pricing-card ul ul {
+    margin-left: 1.2em;
+    margin-top: 0.5em;
+    font-size: 0.98em;
+}
+
+.pricing-card ul li {
+    margin-bottom: 0.5em;
+    line-height: 1.5;
+}
+
+.pricing-card ul li span {
+    color: #00e6d3;
+    font-weight: bold;
+}
+
+.pricing-card:nth-child(2) {
+    /* background: rgba(30,30,40,0.98); */
+    border: 2px solid #00e6d3;
+    /* box-shadow: 0 4px 32px rgba(0,0,0,0.18); */
+}
+
+@media (max-width: 1100px) {
+    #pricing-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    .pricing-card {
+        max-width: 95vw;
+        width: calc(100% - 2.4rem);
+    }
+}
+
+@media (max-width: 600px) {
+    #pricing-section {
+        padding: 30px 0;
+    }
+    .pricing-card {
+        padding: 1.2rem 0.7rem;
+        min-width: 0;
+    }
+    #pricing-section .title {
+        font-size: 1.4rem;
+    }
+}
